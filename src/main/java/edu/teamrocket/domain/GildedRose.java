@@ -7,29 +7,23 @@ public class GildedRose {
     
     List<Updateable> items = new ArrayList<>();
 
-    public GildedRose() {
+    public List<Updateable> inventory() {
+
+        return this.items;
     }
 
     public void addItem(Updateable item) {
-        items.add(item);
+        inventory().add(item);
     }
 
     public void updateQuality() {
-        for (Updateable item : items) {
+        for (Updateable item : inventory()) {
             item.updateQuality();
         }
     }
 
     public String toString(){
-        return "";
+        return "" ;
     }
-
-    public List<Updateable> getItems() {
-        return items;
-    }
-
-
-
-
 }
 
