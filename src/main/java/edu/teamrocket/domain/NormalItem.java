@@ -45,8 +45,4 @@ public class NormalItem implements Updateable{
     public String toString() {
         return this.getName() + ", " + this.getSellIn() + ", " + this.getQuality();
     }
-
-
-
-
 }
