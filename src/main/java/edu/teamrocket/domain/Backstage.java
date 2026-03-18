@@ -1,6 +1,7 @@
 package edu.teamrocket.domain;
 
 public class Backstage extends NormalItem{
+    
     public Backstage(String name, int quality, int sellIn) {
         super(name, quality, sellIn);
     }
