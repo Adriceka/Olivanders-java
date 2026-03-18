@@ -2,9 +2,6 @@ package edu.teamrocket.domain;
 
 public class NormalItem implements Updateable{
 
-        private String name;
-        private int quality;
-        private int sellIn;
         private Item item;
 
     public NormalItem(String name, int quality, int sellIn) {
@@ -29,13 +26,20 @@ public class NormalItem implements Updateable{
         return this.item.getSellIn();
     }
 
-    public void setSellIn(int sellIn) {
-        this.item.setSellIn(sellIn);
+    public void setSellIn() {
+        this.item.setSellIn();
     }
 
     @Override
     public void updateQuality() {
 
+        if (this.item.getSellIn() > 0) {
+            this.item.setQuality(this.item.getQuality() - 1);
+            this.item.setSellIn();
+        }
+        else {
+            this.item.setQuality(this.item.getQuality() - 2);
+        }
     }
 
     protected void computeQuality(int quality) {
