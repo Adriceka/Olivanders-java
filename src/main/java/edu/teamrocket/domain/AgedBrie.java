@@ -1,7 +1,7 @@
 package edu.teamrocket.domain;
 
 public class AgedBrie extends NormalItem{
-    
+
     public AgedBrie(String name, int quality, int sellIn) {
         super(name, quality, sellIn);
     }
@@ -15,6 +15,6 @@ public class AgedBrie extends NormalItem{
                 this.computeQuality(this.getQuality() + 1);
             }
         }
-        this.setSellIn(this.getSellIn() - 1);
+        this.setSellIn();
     }
 }
