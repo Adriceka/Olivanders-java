@@ -16,23 +16,25 @@ public class Item{
        protected String getName() {
            return name;
        }
+
        protected int getQuality() {
            return quality;
        }
+
        protected void setQuality(int quality) {
            this.quality = quality;
        }
+
        protected int getSellIn() {
            return sellIn;
        }
+
        protected void setSellIn(int sellIn) {
            this.sellIn = sellIn;
        }
+
        @Override
        public String toString() {
         return "Item [name=" + name + ", quality=" + quality + ", sellIn=" + sellIn + "]";
        }
-
-
-
 }
