@@ -29,8 +29,8 @@ public class Item{
            return sellIn;
        }
 
-       protected void setSellIn(int sellIn) {
-           this.sellIn = sellIn;
+       protected void setSellIn() {
+           this.sellIn = this.getSellIn() - 1;
        }
 
        @Override
